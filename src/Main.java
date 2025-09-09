@@ -1,15 +1,49 @@
+import java.util.*;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        while(true){
+            Scanner scanner = new Scanner(System.in);
+            Random random = new Random();
+            int ile;
+            int kostka;
+            int suma = 0;
+            String tn;
+            int[] arr = new int[6];
+            for(int num : arr){
+                num = 0;
+            }
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+            do {
+                System.out.println("Enter username");
+                ile = scanner.nextInt();
+            } while (ile < 3 || ile > 10);
+            for(int i = 0; i<ile; i++){
+                kostka = random.nextInt(6)+1;
+                arr[kostka-1]++;
+                System.out.println("kostka: " + (i+1) + ": " + kostka);
+            }
+
+            for(int i = 0; i<arr.length; i++){
+                if(arr[i] * (i+1) >= 2 * (i+1)){
+                    suma+=arr[i] * (i+1);
+                }
+            }
+
+            System.out.println("Liczba uzyskanych punktow: " + suma);
+
+            do{
+                System.out.println("Jeszcze raz? (t/n)");
+                tn = scanner.next();
+            }while(!Objects.equals(tn, "t") && !Objects.equals(tn, "n"));
+            if(Objects.equals(tn, "n")){
+                break;
+            }
         }
+
+
+
     }
 }
