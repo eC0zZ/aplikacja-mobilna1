@@ -4,7 +4,7 @@ import java.util.*;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        while(true){
+        /*while(true){
             Scanner scanner = new Scanner(System.in);
             Random random = new Random();
             int ile;
@@ -17,13 +17,13 @@ public class Main {
             }
 
             do {
-                System.out.println("Enter username");
+                System.out.println("Ile kostek chcesz rzucić?(3 - 10)");
                 ile = scanner.nextInt();
             } while (ile < 3 || ile > 10);
             for(int i = 0; i<ile; i++){
                 kostka = random.nextInt(6)+1;
                 arr[kostka-1]++;
-                System.out.println("kostka: " + (i+1) + ": " + kostka);
+                System.out.println("Kostka: " + (i+1) + ": " + kostka);
             }
 
             for(int i = 0; i<arr.length; i++){
@@ -41,7 +41,11 @@ public class Main {
             if(Objects.equals(tn, "n")){
                 break;
             }
-        }
+
+        }*/
+
+
+
 
 
 
